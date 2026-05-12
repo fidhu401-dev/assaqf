@@ -93,7 +93,7 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Grid */}
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 perspective-container">
           <AnimatePresence>
             {filteredProjects.map((project) => (
               <motion.div
@@ -103,7 +103,7 @@ const Gallery = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
                 key={project.id}
-                className="group relative rounded-2xl overflow-hidden aspect-square cursor-pointer bg-gray-100 dark:bg-gray-800"
+                className="group relative rounded-2xl overflow-hidden aspect-square cursor-pointer bg-gray-100 dark:bg-gray-800 hover-3d-reverse"
                 onClick={() => setSelectedImage(project)}
               >
                 <img 

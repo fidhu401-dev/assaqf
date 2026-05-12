@@ -141,13 +141,13 @@ const Home = () => {
             Services We Provide
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 perspective-container">
             {services.map((srv, i) => (
               <motion.div 
                 key={i}
                 {...fadeInUp}
                 transition={{ delay: i * 0.1 }}
-                className="group p-8 rounded-3xl bg-gray-50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-gray-100 dark:hover:border-gray-700 text-left"
+                className="group p-8 rounded-3xl bg-gray-50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 shadow-sm hover-3d border border-transparent hover:border-gray-100 dark:hover:border-gray-700 text-left"
               >
                 <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                   {srv.icon}

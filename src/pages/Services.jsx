@@ -57,7 +57,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 perspective-container">
           {servicesList.map((service, i) => (
             <motion.div 
               key={i}
@@ -65,7 +65,7 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group rounded-3xl overflow-hidden bg-gray-50 dark:bg-gray-800 shadow-sm hover:shadow-2xl transition-all duration-300"
+              className="group rounded-3xl overflow-hidden bg-gray-50 dark:bg-gray-800 shadow-sm hover-3d"
             >
               <div className="h-64 overflow-hidden">
                 <img 
